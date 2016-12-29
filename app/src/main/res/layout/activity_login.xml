@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/render_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/render_bg"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/toolbar"
+                />
+        </android.support.design.widget.AppBarLayout>
+
+        <Button
+            android:id="@+id/login_weixin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/t_gray"
+            android:text="微信"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_margin="15dp"/>
+
+        <Button
+            android:id="@+id/login_qq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/t_gray"
+            android:text="QQ"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_margin="15dp"/>
+
+        <Button
+            android:id="@+id/login_weibo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/t_gray"
+            android:text="微博"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_margin="15dp"/>
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="25dp"
+        android:maxHeight="3dp"
+        android:max="100"
+        android:progress="12"/>
+</FrameLayout>

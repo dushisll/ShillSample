@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/toolbar"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1、通过余弦+path.arcTo()完成View的绘制"/>
+        <sample.shillsample.widgets.WaveViewByCos
+            android:id="@+id/waveviewbycos"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="2、通过贝塞尔曲线+clip裁剪完成View的绘制"/>
+        
+        <sample.shillsample.widgets.MyProgressView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="3、通过图片+clip裁剪完成波浪效果"/>
+
+        <sample.shillsample.widgets.MySinkingView
+            android:id="@+id/sinkView"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center_horizontal">
+
+        </sample.shillsample.widgets.MySinkingView>
+    </LinearLayout>
+
+</ScrollView>

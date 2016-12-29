@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data class=".observableBinding">
+        <import type="sample.shillsample.ui.databinding.module.PlainUser"/>
+        <import type="sample.shillsample.ui.databinding.module.ObservableUser"/>
+        <import type="android.databinding.ObservableMap"/>
+        <variable
+            name="user"
+            type="ObservableUser"/>
+
+        <variable
+            name="plainUser"
+            type="PlainUser"/>
+        <variable
+            name="mapUser"
+            type="ObservableMap&lt;String, Object>"/>
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Observavble Object"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{@string/nameFormat(user.mFirstName,user.mLastName)}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Observable Field"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{@string/nameFormatWithAge(plainUser.firstName,plainUser.lastName,plainUser.age)}"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Observable Collection"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{@string/nameFormatWithAge(mapUser[`firstname`],mapUser[`lastname`],1+(Integer)mapUser[`age`])}"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="setOtherName"
+                android:text="set other name" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="setMyName"
+                android:text="set my name" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

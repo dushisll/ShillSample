@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="main_channel">
+        <item>网易头条</item>
+        <item>知乎热门</item>
+        <item>简书推荐</item>
+        <item>开发者精选</item>
+        <item>Android</item>
+    </string-array>
+</resources>

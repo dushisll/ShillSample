@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="onText"
+            type="String"/>
+
+        <variable
+            name="listener"
+            type="sample.shillsample.ui.databinding.listener.OkListener"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:onClick="@{listener.onClickOK}"
+            android:text="@{onText}"/>
+    </LinearLayout>
+
+</layout>
